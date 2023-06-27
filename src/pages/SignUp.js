@@ -5,6 +5,7 @@ import JWTContext from "../contexts/JWTContext";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
+const config = require('../config.json');
 
 export default function SignUp() {
 
@@ -22,7 +23,7 @@ export default function SignUp() {
   function insertUser(event){
     event.preventDefault();
         
-    axios.post("http://localhost:3003/user/sign-up", userData)
+    axios.post(config.api_url + "/user/sign-up", userData)
     .then(()=>{
       navigate("/sign-in")
     })
@@ -39,6 +40,7 @@ export default function SignUp() {
             className="mx-auto h-10 w-auto"
             src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1687740375/download_ckkgul.png"
             alt="Arbitralis"
+            onClick={()=>{navigate("/")}}
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Crie sua conta

@@ -5,8 +5,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import JWTContext from "../contexts/JWTContext";
 import { useContext } from "react";
+const config = require('../config.json');
 
 export default function SignIn() {
+
+  console.log(config.api_url);
 
   const [userData, setUserData] = useState({
     email: "",
@@ -39,10 +42,10 @@ export default function SignIn() {
   function sendUserData(event){
     event.preventDefault();
     
-    axios.post("http://localhost:3003/auth/login", userData)
+    axios.post(config.api_url + '/auth/login', userData)
     .then((res)=>{
       saveToken(res.data.access_token);
-      axios.get("http://localhost:3003/auth/profile", { headers: { Authorization: `Bearer ${res.data.access_token}` } })
+      axios.get( config.api_url + '/auth/profile', { headers: { Authorization: `Bearer ${res.data.access_token}` } })
       .then((res)=>{
         saveUserData(JSON.stringify(res.data));
         navigate("/dashboard");
@@ -60,6 +63,7 @@ export default function SignIn() {
             className="mx-auto h-10 w-auto"
             src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1687740375/download_ckkgul.png"
             alt="Arbitralis"
+            onClick={()=>{navigate("/")}}
           />
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
             Logue em sua conta

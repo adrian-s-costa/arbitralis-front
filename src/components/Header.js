@@ -3,9 +3,11 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useContext } from 'react';
 import JWTContext from '../contexts/JWTContext';
+import { useNavigate } from 'react-router-dom';
 
 const navigation = [
-  { name: 'Climas', href: '/', current: false },
+  { name: 'Home', href: '/', current: false },
+  { name: 'Climas', href: '/dashboard', current: false }
 ]
 
 function classNames(...classes) {
@@ -16,7 +18,7 @@ export default function Header(props) {
 
   const savedUser = JSON.parse(localStorage.getItem('userData'));
   
-  console.log(savedUser);
+  const navigate = useNavigate();
 
   const { setToken } = useContext(JWTContext);
 
@@ -49,11 +51,13 @@ export default function Header(props) {
                     className="block h-8 w-auto lg:hidden"
                     src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1687740375/download_ckkgul.png"
                     alt="Arbitralis"
+                    onClick={()=>{navigate("/")}}
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
                     src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1687740375/download_ckkgul.png"
                     alt="Arbitralis"
+                    onClick={()=>{navigate("/")}}
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">

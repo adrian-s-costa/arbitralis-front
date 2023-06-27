@@ -39,7 +39,7 @@ export default function Home() {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-[#2b1b65] hover:text-[#fa3824]">
+            <a href="/dashboard" className="text-sm font-semibold leading-6 text-[#2b1b65] hover:text-[#fa3824]">
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -80,7 +80,7 @@ export default function Home() {
                 </div>
                 <div className="py-6">
                   <a
-                    href="/sign-in"
+                    href="/dashboard"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-[#2b1b65] hover:text-[#fa3824]"
                   >
                     Log in
@@ -109,7 +109,7 @@ export default function Home() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Anunciando agora .{' '}
-              <a href="/sign-in" className="font-semibold text-[#2b1b65] hover:text-[#fa3824]">
+              <a href="/dashboard" className="font-semibold text-[#2b1b65] hover:text-[#fa3824]">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Read more <span aria-hidden="true">&rarr;</span>
               </a>
@@ -124,12 +124,12 @@ export default function Home() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="/sign-in"
+                href="/dashboard"
                 className="rounded-md bg-[#fa3824] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#2b1b65] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Começar
               </a>
-              <a href="/sign-in" className="text-sm font-semibold leading-6 text-[#2b1b65] hover:text-[#fa3824]">
+              <a href="/dashboard" className="text-sm font-semibold leading-6 text-[#2b1b65] hover:text-[#fa3824]">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>

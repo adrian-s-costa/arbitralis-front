@@ -1,12 +1,13 @@
 import axios from "axios"
 import { toast } from "react-toastify"
+const config = require('../config.json');
 
 export default function WeatherDiv(props){
 
   const savedToken = localStorage.getItem('token');
 
   function deletePlace(id){
-    axios.delete(`http://localhost:3003/weather/${id}`, { headers: { Authorization: `Bearer ${ savedToken }` } })
+    axios.delete(config.api_url + `/weather/${id}`, { headers: { Authorization: `Bearer ${ savedToken }` } })
     .then(()=>{
       toast("Deletado com sucesso!")
     })

@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState, useContext } from 'react';
 import { debounce } from 'lodash';
+const config = require('../config.json');
 
 export default function Dashboard(){
 
@@ -30,7 +31,7 @@ export default function Dashboard(){
           setUserDataContext(savedUser);
         }
   
-        const response = await axios.get(`http://localhost:3003/weather/${savedUser.userId}`, {
+        const response = await axios.get(config.api_url + `/weather/${savedUser.userId}`, {
           headers: { Authorization: `Bearer ${savedToken}` },
         });
   
@@ -62,7 +63,7 @@ export default function Dashboard(){
         setUserDataContext(savedUser);
       }
 
-      const response = await axios.get(`http://localhost:3003/weather/${savedUser.userId}`, {
+      const response = await axios.get(config.api_url + `/weather/${savedUser.userId}`, {
         headers: { Authorization: `Bearer ${savedToken}` },
       });
 

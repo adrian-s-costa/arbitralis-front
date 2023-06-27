@@ -5,6 +5,7 @@ import PlacesAutocomplete, {
   getLatLng,
 } from 'react-places-autocomplete';
 import { useNavigate } from 'react-router-dom';
+const config = require("../config.json");
 
 const LocationSearchInput = ({ setOpen }) => {
   const [address, setAddress] = useState('');
@@ -21,9 +22,9 @@ const LocationSearchInput = ({ setOpen }) => {
     geocodeByAddress(address)
       .then((results) => getLatLng(results[0]))
       .then((latLng) => {
-        axios.get("http://localhost:3003/auth/profile", { headers: { Authorization: `Bearer ${ savedToken }` } })
+        axios.get(config.api_url + "/auth/profile", { headers: { Authorization: `Bearer ${ savedToken }` } })
         .then((res)=>{
-          axios.post('http://localhost:3003/weather', { latLng, address, res }, { headers: { Authorization: `Bearer ${ savedToken }` } })
+          axios.post(config.api_url + '/weather', { latLng, address, res }, { headers: { Authorization: `Bearer ${ savedToken }` } })
         })
         .catch(()=>{
           //navigate("/sign-in");
