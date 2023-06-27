@@ -45,7 +45,7 @@ export default function SignIn() {
       axios.get("http://localhost:3003/auth/profile", { headers: { Authorization: `Bearer ${res.data.access_token}` } })
       .then((res)=>{
         saveUserData(JSON.stringify(res.data));
-        navigate("/");
+        navigate("/dashboard");
       })
       .catch(notify("Houve algum problema no login"));
     })

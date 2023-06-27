@@ -4,6 +4,7 @@ import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import JWTContext from './contexts/JWTContext';
 import { useState } from 'react';
+import Home from './pages/Home';
 
 export default function App (){
 
@@ -16,7 +17,8 @@ export default function App (){
       <BrowserRouter>
       <JWTContext.Provider value={contextValue}>      
           <Routes>
-            <Route path="/" element={<Dashboard />}/>
+            <Route path="/" element={<Home />}/>
+            <Route path="/dashboard" element={<Dashboard />}/>
             <Route path="/sign-in" element={<SignIn />}/>
             <Route path="/sign-up" element={<SignUp />}/>
           </Routes>
