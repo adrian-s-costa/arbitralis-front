@@ -84,7 +84,7 @@ export default function Dashboard(){
           {
             weatherArray.length === 0 ? <EmptyDashboard open={ open } setOpen={ setOpen } /> :
             weatherArray.map((w)=>(
-              <WeatherDiv id={w.id} graus={w.graus} lugar={w.lugar} icone={w.icone} clima={w.clima} />
+              <WeatherDiv id={w.id} graus={w.graus} lugar={w.lugar} icone={w.icone} clima={w.clima} umidade={w.umidade}/>
             ))
           }
         </div>

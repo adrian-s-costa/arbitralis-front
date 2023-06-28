@@ -18,6 +18,7 @@ export default function WeatherDiv(props){
       <img className="w-[40px]" src={`https://openweathermap.org/img/wn/${props.icone}.png`}/>
       <p className="w-[40px] flex items-center">{props.graus}</p>
       <p className="w-[500px] flex items-center">{props.lugar}</p>
+      <p className="w-[150px] flex items-center">{props.umidade}</p>
       <p className=" w-[150px] flex items-center" >{props.clima}</p>
       <button onClick={()=>{ deletePlace(props.id) }}>x</button>
     </div>
