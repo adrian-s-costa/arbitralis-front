@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1687912863/308830962_436245725278167_5731677229795523086_n_n9g23c.png" width="250" alt="Arbitralis Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1687915531/image_1_vcaxme.png" alt="Landing do projeto" /></a>
 </p>
 
 # Descrição
