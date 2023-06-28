@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1687982181/image_2_qbhcsz.png" alt="Landing do projeto" /></a>
+  <a href="" target="blank"><img src="https://res.cloudinary.com/dmo7nzytn/image/upload/v1687982181/image_2_qbhcsz.png" alt="Landing do projeto" /></a>
 </p>
 
 # Descrição
