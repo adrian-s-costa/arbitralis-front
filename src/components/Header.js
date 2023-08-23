@@ -93,7 +93,7 @@ export default function Header(props) {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src={savedUser.pfp}
+                        src={savedUser && savedUser.pfp}
                         alt=""
                       />
                     </Menu.Button>
