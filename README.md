@@ -3,7 +3,7 @@
 </p>
 
 # Descrição
-Este repositório contém o front-end da API CRUD de clima/tempo desenvolvida para a empresa Arbtralis como teste técnico. O front-end permite que os usuários interajam com a API e obtenham informações atualizadas sobre as condições climáticas de diferentes localidades do globo.
+Este repositório contém o front-end da API CRUD de clima/tempo desenvolvida para a empresa Arbitralis como teste técnico. O front-end permite que os usuários interajam com a API e obtenham informações atualizadas sobre as condições climáticas de diferentes localidades do globo.
 
 ## Funcionalidades
 Consultar o clima de qualquer cidade 🌎 <br/>
